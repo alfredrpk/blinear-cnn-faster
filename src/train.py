@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/home/starlight/anaconda3/bin/python
 # -*- coding: utf-8 -*-
 """Fine-tune all layers for bilinear CNN.
 

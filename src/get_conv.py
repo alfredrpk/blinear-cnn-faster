@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/home/starlight/anaconda3/bin/python
 # -*- coding: utf-8 -*-
 """Get relu5-3 features for CUB/Aircraft/Cars dataset.
 
