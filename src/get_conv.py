@@ -1,4 +1,4 @@
-#!/home/starlight/anaconda3/bin/python
+#!/usr/bin/env python
 # -*- coding: utf-8 -*-
 """Get relu5-3 features for CUB/Aircraft/Cars dataset.
 
@@ -124,8 +124,8 @@ def main():
         'aircraft': os.path.join(project_root, 'data', 'aircraft'),
         'cars': os.path.join(project_root, 'data', 'cars'),
     }
-    for d in paths:
-        assert os.path.isdir(paths[d])
+    """for d in paths:
+        assert os.path.isdir(paths[d])"""
 
     manager = VGGManager(paths)
     manager.getFeature('train', 5994)
