@@ -124,8 +124,10 @@ def main():
         'aircraft': os.path.join(project_root, 'data', 'aircraft'),
         'cars': os.path.join(project_root, 'data', 'cars'),
     }
-    """for d in paths:
-        assert os.path.isdir(paths[d])"""
+    for d in paths:
+        if not os.path.exists(paths[d]):
+            os.makedirs(paths[d])
+        assert os.path.isdir(paths[d])
 
     manager = VGGManager(paths)
     manager.getFeature('train', 5994)
