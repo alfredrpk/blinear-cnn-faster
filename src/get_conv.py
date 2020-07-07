@@ -113,8 +113,7 @@ class VGGManager(object):
                 all_data.append(torch.squeeze(feature, dim=0).cpu())
                 all_label.append(label.item())
             assert len(all_data) == size and len(all_label) == size
-            print(os.getcwd())
-            print(self._paths['cub200'])
+            os.makedirs(self._paths['cub200'] + '/relu5-3')
             torch.save((all_data, all_label), os.path.join(
                 self._paths['cub200'], 'relu5-3', '%s.pth' % phase))
 
