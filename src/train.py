@@ -241,6 +241,7 @@ def main():
                        if args.pretrained else None),
     }
     for d in paths:
+        print(str(paths[d])
         if not os.path.exists(paths[d]):
             os.makedirs(paths[d])
         if d == 'pretrained':
