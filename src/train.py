@@ -241,6 +241,8 @@ def main():
                        if args.pretrained else None),
     }
     for d in paths:
+        if not os.path.exists(paths[d]):
+            os.makedirs(paths[d])
         if d == 'pretrained':
             assert paths[d] is None or os.path.isfile(paths[d])
         else:
