@@ -158,7 +158,7 @@ class BCNNManager(object):
             if test_acc > best_acc:
                 best_acc = test_acc
                 best_epoch = t + 1
-                print('*', end='')
+                print('*', end=='')
                 save_path = os.path.join(
                     self._paths['model'],
                     'bcnn_%s_epoch_%d.pth' % (
