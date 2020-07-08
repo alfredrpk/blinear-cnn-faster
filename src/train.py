@@ -117,7 +117,7 @@ class BCNNManager(object):
             num_workers=4, pin_memory=False)
         self._test_loader = torch.utils.data.DataLoader(
             test_data,
-            batch_size=(64 if self._paths['pretrained'] is not None else 4096),
+            batch_size=(64 if self._paths['pretrained'] is not None else 64), #4096),
             shuffle=False, num_workers=4, pin_memory=False)
 
     def train(self):
@@ -158,7 +158,7 @@ class BCNNManager(object):
             if test_acc > best_acc:
                 best_acc = test_acc
                 best_epoch = t + 1
-                print('*', end=='')
+                #print('*', end=='')
                 save_path = os.path.join(
                     self._paths['model'],
                     'bcnn_%s_epoch_%d.pth' % (
