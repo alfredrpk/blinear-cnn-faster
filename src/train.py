@@ -245,7 +245,7 @@ def main():
         if not os.path.exists(str(paths[d])):
             os.makedirs(str(paths[d]))
         if d == 'pretrained':
-            assert paths[d] is None or os.path.isfile(paths[d])
+            #assert paths[d] is None or os.path.isfile(paths[d])
         else:
             assert os.path.isdir(paths[d])
 
