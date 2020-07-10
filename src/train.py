@@ -246,6 +246,7 @@ def main():
             os.makedirs(str(paths[d]))
         if d == 'pretrained':
             #assert paths[d] is None or os.path.isfile(paths[d])
+            print('filler')
         else:
             assert os.path.isdir(paths[d])
 
