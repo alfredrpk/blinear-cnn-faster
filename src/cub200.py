@@ -89,7 +89,7 @@ class CUB200(torch.utils.data.Dataset):
                     and len(self._train_labels) == 5994)
         else:
             self._test_data, self._test_labels = pickle.load(open(
-                os.path.join(self._root, 'processed/test.pkl'), 'rb'))
+                os.path.join(self._root, 'processed/test.pkl'), 'rb'), encoding="bytes")
             assert (len(self._test_data) == 5794
                     and len(self._test_labels) == 5794)
 
